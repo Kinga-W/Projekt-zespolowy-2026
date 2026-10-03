@@ -1,1 +1,1 @@
-# Projekt-zespo-owy-2026
+# Projekt-zespołowy-2026
