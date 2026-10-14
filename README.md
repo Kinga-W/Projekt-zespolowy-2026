@@ -1,6 +1,7 @@
 # Projekt-zespołowy-2026
 
 Julia Aftyka - developer oraz asystent jakości
+
 Kinga Wyszecka - lider oraz osoba od infrastruktury
 
 Problem:
