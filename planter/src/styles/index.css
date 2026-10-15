@@ -1,0 +1,23 @@
+:root {
+  --color-bg: #fefae0;
+  --color-main: #606c38;
+  --color-main-dark: #283618;
+  --color-secondary: #bc6c25;
+  --color-secondary-light: #dda15e;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 30px;
+  background-color: var(--color-main);
+}
+
+
