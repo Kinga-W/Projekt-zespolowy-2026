@@ -15,10 +15,16 @@ Biorąc pod uwage cel projektu oraz terminy, wspólnie podejmujemy decyzje najba
 W razie niepewności należy rozeznać się w temacie, określić za i przeciw i przedstawić reszcie zespołu.
 
 5. Postępowanie przy niedowiezionym zadaniu
+Każdy członek zespołu odpowiada za cały projekt. Należy sobie pomagać i działać w imie dobra projektu.
+Nie dostarczenie zadań do których się zobowiązało, bez sygnalizowania problemów ani opóźnień, przenosi odpowiedzialność na członka zespołu.
 
 Członkowie zespołu: 
+
 Julia Aftyka
+
 Kinga Wyszecka
 
+
 Data przyjęcia kontraktu: ... .10.2026r.
+
 Data ostatniej aktualizacji kontraktu: 14.10.2026r.
