@@ -13,6 +13,7 @@ Czas na odpowiedź to do końca dnia.
 | Piątek | 16:00–22:00 | — |
 | Sobota | 16:30–22:00 | — |
 | Niedziela | 16:30–22:00 | — |
+
 Julia: 
 Pon, Wt, Pt: 16:00-22:00
 Sob, Nie: 16:30-22:00 
