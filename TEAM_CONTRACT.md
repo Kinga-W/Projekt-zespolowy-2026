@@ -4,6 +4,15 @@ Komunikacja odbywać się będzie za pomocą Discorda.
 Czas na odpowiedź to do końca dnia. 
 
 ## 2. Dostępność członków między zjazdami
+| Dzień | Julia | Kinga |
+|---|---|---|
+| Poniedziałek | 16:00–22:00 | 14:00–20:00 |
+| Wtorek | 16:00–22:00 | 14:00–20:00 |
+| Środa | — | 14:00–20:00 |
+| Czwartek | — | 14:00–20:00 |
+| Piątek | 16:00–22:00 | — |
+| Sobota | 16:30–22:00 | — |
+| Niedziela | 16:30–22:00 | — |
 Julia: 
 Pon, Wt, Pt: 16:00-22:00
 Sob, Nie: 16:30-22:00 
