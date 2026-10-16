@@ -23,8 +23,8 @@ Każdy członek zespołu odpowiada za cały projekt. Należy sobie pomagać i dz
 Niedostarczenie zadań do których się zobowiązało, bez sygnalizowania problemów ani opóźnień, przenosi odpowiedzialność na członka zespołu.
 
 ## 5. Członkowie zespołu: 
-Julia Aftyka
-Kinga Wyszecka
++ Julia Aftyka
++ Kinga Wyszecka
 
 Data przyjęcia kontraktu: 16.10.2026r.
 
