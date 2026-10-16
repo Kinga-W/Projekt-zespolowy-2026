@@ -14,12 +14,6 @@ Czas na odpowiedź to do końca dnia.
 | Sobota | 16:30–22:00 | — |
 | Niedziela | 16:30–22:00 | — |
 
-Julia: 
-Pon, Wt, Pt: 16:00-22:00
-Sob, Nie: 16:30-22:00 
-Kinga:
-Pon - Czw: 14:00-20:00
-
 ## 3. Sposób podejmowania decyzji
 Biorąc pod uwagę cel projektu oraz terminy, wspólnie podejmujemy decyzje najbardziej korzystne i możliwe do zrealizowania w danym czasie. 
 W razie niepewności należy rozeznać się w temacie, określić za i przeciw oraz przedstawić je reszcie zespołu.
