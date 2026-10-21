@@ -4,17 +4,18 @@ import Account from './pages/Account';
 import Scanner from './pages/Scanner';
 import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
+import logo from './assets/placeholder.png';
 
 export default function App() {
   return (
     <BrowserRouter>
       <header>
+        <Link to="/"><img src={logo} alt="logo" />Strona Główna</Link>
         <nav>
-          <Link to="/">Strona Główna</Link>
-          <Link to="/account">Moje Konto</Link>
           <Link to="/catalog">Katalog</Link>
           <Link to="/planner">Planner</Link>
           <Link to="/scanner">Skaner</Link>
+          <Link to="/account">Moje Konto</Link>
         </nav>
       </header>
 
