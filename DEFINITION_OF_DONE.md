@@ -9,7 +9,7 @@ Katalog roślin zawiera alfabetycznie ustawione rośliny oraz podstawowe informa
 Umożliwia wyszukiwanie roślin oraz zaznaczenie rośliny jako ulubiona.
 
 
-Definition of Done:
+Warunki zakończenia:
 
 - Katalog da się przeglądać bez błędów i rozjechań układu
 
