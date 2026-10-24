@@ -11,8 +11,14 @@ Umożliwia wyszukiwanie roślin oraz zaznaczenie rośliny jako ulubiona.
 
 Warunki zakończenia:
 
+- Szkielet projektu jest dostępny w przeglądarce bez lokalnego uruchomienia
+
 - Katalog da się przeglądać bez błędów i rozjechań układu
 
 - Dane są poprawnie pobierane z bazy danych i wyświetlane bez wyjeżdżania poza swoją pozycje
 
 - Błędy są obsłużone i odpowiednio zakomunikowane
+
+- Kod został sprawdzony
+
+- Układ katalogu jest zgodny z makieta
