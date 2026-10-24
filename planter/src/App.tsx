@@ -26,6 +26,5 @@ export default function App() {
         <Route path="/planner" element={<Planner />} />
         <Route path="/scanner" element={<Scanner />} />
       </Routes>
-    </BrowserRouter>
   );
 }
