@@ -4,7 +4,11 @@
   --color-main-dark: #283618;
   --color-secondary: #bc6c25;
   --color-secondary-light: #dda15e;
+
   --text-color: #000;
+  --font-big: 24px;
+  --font-medium: 16px;
+  --font-small: 14px;
 }
 
 * {
@@ -37,7 +41,7 @@ Link {
   align-items: center; 
 }
 
-img {
+.logo {
   height: 40px;
   border-radius: 100px;
 }

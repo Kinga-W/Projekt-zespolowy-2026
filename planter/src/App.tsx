@@ -10,7 +10,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <header>
-        <Link to="/"><img src={logo} alt="logo" />Strona Główna</Link>
+        <Link to="/"><img className="logo" src={logo} alt="logo" />Strona Główna</Link>
         <nav>
           <Link to="/catalog">Katalog</Link>
           <Link to="/planner">Planner</Link>
