@@ -6,9 +6,6 @@ import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
 import logo from './assets/placeholder.png';
 
-import { useState, useEffect } from 'react';
-import { supabase } from './utils/supabase';
-
 export default function App() {
   return (
     <BrowserRouter>
