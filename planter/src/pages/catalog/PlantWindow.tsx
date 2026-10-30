@@ -14,7 +14,7 @@ import soil5 from '@/assets/soil5.png';
 import soil6 from '@/assets/soil6.png';
 import soil7 from '@/assets/soil7.png';
 
-export default function PlantWindow() {
+export default function PlantWindow({ plant }: { plant: any }) {
   const sunImages: Record<number, string> = {1:sun1, 2:sun2, 3:sun3, 4:sun4};
   const waterImages: Record<number, string> = {1:water1, 2:water2, 3:water3};
   const soilImages: Record<number, string> = {1:soil1, 2:soil2, 3:soil3, 4:soil4, 5:soil5, 6:soil6, 7:soil7};
