@@ -53,6 +53,13 @@ p{
 
 .info{
     padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.info > img {
+    margin: 4px 12px;
+    height: 60px;
 }
 
 .plant-photo{
