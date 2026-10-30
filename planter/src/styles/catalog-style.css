@@ -42,7 +42,7 @@ p{
 
 .plant-window{
     padding: 8px;
-    background-color: var(--color-secondary-light);
+    background: linear-gradient(to bottom left, var(--color-main), var(--color-secondary));
     border-radius: 22px;
     box-sizing: border-box;
 }
