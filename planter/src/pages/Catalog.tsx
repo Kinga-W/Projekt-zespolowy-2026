@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from '../utils/supabase'
+import PlantWindow from "./catalog/PlantWindow";
+import "@/styles/catalog-style.css";
 
 type Plant = {
   id: number
@@ -33,17 +35,19 @@ export default function Catalog() {
   if (error) return <p>Error loading plants: {error}</p>
 
   return (
-    <>
-      <h1>Plant Catalog</h1>
-      {plants.length === 0 ? (
-        <p>No plants available.</p>
-      ) : (
-        <ul>
-          {plants.map((plant) => (
-            <li key={plant.id}>{plant.name}</li>
-          ))}
-        </ul>
-      )}
-    </>
+    <div className="catalog">
+      <h2>Katalog roślin</h2>
+      <div className="search"></div>
+      <div className="plant-container">
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+        <PlantWindow></PlantWindow>
+      </div>
+    </div>
   )
 }
