@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react'
 import potatopic from "@/assets/placeholder.png";
+import type { Plant } from '@/hooks/usePlants';
 import sun1 from '@/assets/sun1.png';
 import sun2 from '@/assets/sun2.png';
 import sun3 from '@/assets/sun3.png';
@@ -14,23 +16,31 @@ import soil5 from '@/assets/soil5.png';
 import soil6 from '@/assets/soil6.png';
 import soil7 from '@/assets/soil7.png';
 
-export default function PlantWindow() {
+export default function PlantWindow({ plant }: { plant: any }) {
   const sunImages: Record<number, string> = {1:sun1, 2:sun2, 3:sun3, 4:sun4};
   const waterImages: Record<number, string> = {1:water1, 2:water2, 3:water3};
   const soilImages: Record<number, string> = {1:soil1, 2:soil2, 3:soil3, 4:soil4, 5:soil5, 6:soil6, 7:soil7};
+  
+  const [lightURL, setLightURL] = useState(sunImages[plant.light]);
+  const [waterURL, setWaterURL] = useState(waterImages[plant.watering_requirement]);
+  const [soilURL, setSoilURL] = useState(soilImages[plant.soil[0]]);
+
+  //TODO alt nazwy
+
   return (
     <div className="plant-window">
       <img className="plant-photo" src={potatopic}></img>
       <div className="title">
-        <h3>Plant.name</h3>
-        <h4>łac. Plant.name_lac</h4>
-        <h5>Plant.type</h5>
+        <h3>{plant.name}</h3>
+        <h4>łac. {plant.name_lac}</h4>
+        <h5>rodzina: {plant.type}</h5>
+        
       </div>
       <hr/>
       <div className="info">
-        <img src={sunImages[4]}></img>
-        <img src={waterImages[2]}></img>
-        <img src={soilImages[7]}></img>
+        <img src={lightURL}></img>
+        <img src={waterURL}></img>
+        <img src={soilURL}></img>
       </div>
     </div>
   )

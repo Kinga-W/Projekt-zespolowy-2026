@@ -1,9 +1,11 @@
 :root {
-  --color-bg: #fefae0;
-  --color-main: #606c38;
-  --color-main-dark: #283618;
-  --color-secondary: #bc6c25;
-  --color-secondary-light: #dda15e;
+  --color-bg: #f5efe3;
+  --color-bg-light: #F9F6F0;
+  --color-main: #dacaa9;
+  --color-main-dark: #ccb992;
+  --color-secondary: #505c2a;
+  --color-secondary-light: #6d7e35;
+  --color-third: #ba892d;
 
   --text-color: #000;
   --font-big: 24px;
@@ -51,4 +53,8 @@ nav {
   gap: 20px;
 }
 
+main {
+  background-color: var(--color-secondary-light);
+  background-image: url('../assets/bg-pattern.png');
+}
 

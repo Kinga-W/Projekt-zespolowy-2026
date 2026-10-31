@@ -42,8 +42,8 @@ p{
 
 .plant-window{
     padding: 8px;
-    background: linear-gradient(to bottom left, var(--color-main), var(--color-secondary));
-    border-radius: 22px;
+    background: linear-gradient(to bottom left, var(--color-secondary-light), var(--color-secondary));
+    border-radius: 12px;
     box-sizing: border-box;
 }
 
@@ -63,6 +63,6 @@ p{
 }
 
 .plant-photo{
-    border-radius: 16px;
+    border-radius: 4px;
     width: 300px;
 }

@@ -18,14 +18,15 @@ export default function App() {
           <Link to="/account">Moje Konto</Link>
         </nav>
       </header>
-
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/account" element={<Account />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/planner" element={<Planner />} />
-        <Route path="/scanner" element={<Scanner />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/account" element={<Account />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/planner" element={<Planner />} />
+          <Route path="/scanner" element={<Scanner />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
