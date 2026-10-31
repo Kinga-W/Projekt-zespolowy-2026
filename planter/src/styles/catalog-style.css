@@ -29,8 +29,15 @@ p{
     justify-self: center;
 }
 
-.search{
+.searchbar{
+    display: flex;
+    width: 70%;
+    padding: 5px 10px;
+}
 
+.search{
+    background-color: var(white);
+    width: 100%;
 }
 
 .plant-container{

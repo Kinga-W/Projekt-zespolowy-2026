@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import getPlantsFromDB from '../hooks/getPlantsFromDB'
 import PlantWindow from "./catalog/PlantWindow";
+import PlantSearch from "./catalog/PlantSearch";
 import "@/styles/catalog-style.css";
 
 
@@ -16,7 +17,9 @@ export default function Catalog() {
   return (
     <div className="catalog">
       <h2>Katalog roślin</h2>
-      <div className="search"></div>
+      <div className="searchbar">
+        <PlantSearch />
+      </div>
       <div className="plant-container">
         {plants.map((plant) => (
           <PlantWindow key={plant.id} plant={plant} />
