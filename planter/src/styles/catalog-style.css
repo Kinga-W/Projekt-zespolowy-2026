@@ -6,17 +6,20 @@ h2{
 
 h3{
     font-size: var(--font-big);
+    text-indent: 12px;
 }
 
 h4{
     font-size: var(--font-medium);
     font-style: italic;
     font-weight: 500;
+    text-indent: 16px;
 }
 
 h5{
     font-size: var(--font-small);
     font-weight: 500;
+    text-indent: 16px;
 }
 
 p{
@@ -25,7 +28,7 @@ p{
 
 .catalog{
     background-color: var(--color-bg);
-    width: 70%;
+    width: 75%;
     justify-self: center;
 }
 
@@ -36,19 +39,26 @@ p{
 .plant-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
+    gap: 16px;
+    padding: 16px;
 }
 
 .plant-window{
-    padding: 8px;
     background: linear-gradient(to bottom left, var(--color-secondary-light), var(--color-secondary));
     border-radius: 12px;
-    box-sizing: border-box;
+    box-shadow: 1px 1px 8px #666;
 }
 
 .title{
-    padding: 5px 10px;
+    background-color: var(--color-secondary-light);
+    padding: 5px 0px 8px 0px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #000;
 }
 
 .info{
@@ -63,6 +73,13 @@ p{
 }
 
 .plant-photo{
-    border-radius: 4px;
+    display: block;
+    margin: 8px;
+    margin-bottom: 0;
+    border-radius: 4px 4px 0 0;
     width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: inset 1px 1px 10px var(--color-secondary);
+    border: solid 1px var(--color-secondary)
 }

@@ -1,6 +1,6 @@
 import PlantWindow from "./catalog/PlantWindow";
 import "@/styles/catalog-style.css";
-import usePlantSimple from '@/hooks/usePlantSimple'
+import usePlantSimple from '@/hooks/usePlantWindowData'
 import { useState, useEffect } from 'react'
 import { supabase } from '../utils/supabase'
 

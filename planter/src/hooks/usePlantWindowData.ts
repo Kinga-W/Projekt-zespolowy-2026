@@ -7,8 +7,14 @@ export type Plant = {
     name_lac: string
     type: string
     light: number
-    watering_requirement: number
-    soil: number[]
+    light_alt: string
+    water: number
+    water_alt: string
+    soil: {
+        id: number
+        name: string
+    }
+    url: string
 }
 
 export default function usePlants() {
@@ -20,7 +26,7 @@ export default function usePlants() {
         async function getPlants() {
             const { data, error } = await supabase
                 .from('plant')
-                .select('id,name,name_lac,light,watering_requirement,plant_type:type ( name ),plant_soil ( soil_id )')
+                .select('id,name,name_lac,plant_type:type(name),light,light_type:light(name),watering_requirement,low_high:watering_requirement(name),plant_soil(soil_id,soil(id,name)),photo_url')
             console.log(JSON.stringify(data, null, 2))
             if (error) {
                 setError(error.message)
@@ -32,8 +38,14 @@ export default function usePlants() {
                         name_lac: plant.name_lac,
                         type: plant.plant_type?.name ?? '',
                         light: plant.light,
-                        watering_requirement: plant.watering_requirement,
-                        soil: plant.plant_soil?.map((ps: any) => ps.soil_id) ?? [],
+                        light_alt: plant.light_type?.name ?? '',
+                        water: plant.watering_requirement,
+                        water_alt: plant.low_high?.name ?? '',
+                        soil: plant.plant_soil?.map((ps: any) => ({
+                            id: ps.soil?.id,
+                            name: ps.soil?.name
+                        })) ?? [],
+                        url: plant.photo_url
                     }))
                 )
             }

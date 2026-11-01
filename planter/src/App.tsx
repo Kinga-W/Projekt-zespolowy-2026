@@ -4,7 +4,7 @@ import Account from './pages/Account';
 import Scanner from './pages/Scanner';
 import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
-import logo from './assets/placeholder.png';
+import logo from '/placeholder.png';
 
 export default function App() {
   return (
