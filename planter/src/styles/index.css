@@ -55,6 +55,6 @@ nav {
 
 main {
   background-color: var(--color-secondary-light);
-  background-image: url('../assets/bg-pattern.png');
+  background-image: url('../../public/bg-pattern.png');
 }
 
