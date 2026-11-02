@@ -45,7 +45,7 @@ p{
     white-space: normal;
     overflow-wrap: break-word;
     width: 318px;
-    height: 484px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
@@ -76,14 +76,63 @@ hr{
 }
 
 .plant-photo{
-    display: block;
     margin: 8px;
     margin-bottom: 0;
     border-radius: 4px 4px 0 0;
     width: 300px;
     height: 300px;
     justify-self: center;
-    object-fit: cover;
+    flex-shrink: 1;
     box-shadow: inset 1px 1px 10px var(--color-secondary);
-    border: solid 1px var(--color-secondary)
+    border: solid 1px var(--color-secondary);
+    overflow: hidden;
+    position: relative;
+}
+
+.plant-photo > img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+
+.btn-fav{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    fill: var(--color-third);
+    scale: 1.5;
+    transform: scaleX(1.06) scaleY(0.95);
+    stroke: var(--color-secondary-dark);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+}
+
+.btn-fav:hover{
+    fill: var(--color-red);
+    stroke: var(--color-bg-light);
+    stroke-width: 1px;
+    stroke-linejoin: round;
+}
+
+.button{
+    padding: 4px;
+    display: flex;
+    box-sizing: border-box;
+    min-height: 35px;
+}
+
+.btn-more{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--color-secondary-dark);
+    border: none;
+    border-radius: 0 0 12px 12px;
+}
+
+.btn-more:hover{
+    outline: 2px solid var(--color-secondary-dark);
 }

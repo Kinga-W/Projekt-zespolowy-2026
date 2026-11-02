@@ -5,7 +5,9 @@
   --color-main-dark: #ccb992;
   --color-secondary: #505c2a;
   --color-secondary-light: #6d7e35;
+  --color-secondary-dark: #4b5726;
   --color-third: #ba892d;
+  --color-red: #ba3d2d;
 
   --text-color: #000;
   --font-big: 24px;
@@ -58,3 +60,11 @@ main {
   background-image: url('../../public/bg-pattern.png');
 }
 
+button{
+  transition: filter 0.2s ease;
+}
+
+button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
