@@ -27,6 +27,20 @@ p{
     background-color: var(--color-bg);
     width: 70%;
     justify-self: center;
+    margin: auto;
+}
+
+.search-container {
+    display: flex;
+    margin: auto;
+    padding: 10px 10px;
+    max-width: 100%;
+}
+
+.searchbar{
+    display: flex;
+    width: 100%;
+    padding: 10px 10px;
 }
 
 .searchbar{
@@ -36,8 +50,34 @@ p{
 }
 
 .search{
-    background-color: var(white);
+    background-color: white;
     width: 100%;
+    font-size: var(--font-medium);
+    color:var(--text-color);
+    border-radius:28px;
+    padding: 16px 16px;
+    box-shadow: 1px 1px 8px #666;
+}
+
+.filter-button {
+    display:flex;
+    margin:auto;
+    box-shadow: 1px 1px 8px #666;
+    padding:5px 5px 5px 5px;
+    margin: 0;
+    border-radius:28px;
+    max-width: 40px;
+    aspect-ratio: 1/1;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
+.filter-icon {
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+    margin: auto;
 }
 
 .plant-container{
