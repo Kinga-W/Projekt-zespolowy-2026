@@ -5,22 +5,18 @@ h2{
 }
 
 h3{
-    font-size: var(--font-big);
+    font-size: var(--font-XL);
 }
 
 h4{
-    font-size: var(--font-medium);
+    font-size: var(--font-M);
     font-style: italic;
     font-weight: 500;
 }
 
 h5{
-    font-size: var(--font-small);
+    font-size: var(--font-S);
     font-weight: 500;
-}
-
-p{
-    font-size: 14px;
 }
 
 .catalog{
@@ -54,12 +50,6 @@ p{
     background-color: var(--color-secondary-light);
     padding: 0px 0px 3px 5px;
     border: 7px solid var(--color-secondary-light);
-}
-
-hr{
-    border: none;
-    height: 1px;
-    background-color: #000;
 }
 
 .info{

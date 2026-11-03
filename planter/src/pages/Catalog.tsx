@@ -1,8 +1,8 @@
 import PlantWindow from "./catalog/PlantWindow";
+import PlantPopup from "./catalog/PlantPopup";
 import "@/styles/catalog-style.css";
 import usePlantSimple from '@/hooks/usePlantWindowData'
 import { useState, useEffect } from 'react'
-import { supabase } from '../utils/supabase'
 
 type Plant = {
   id: number
@@ -11,6 +11,7 @@ type Plant = {
 
 export default function Catalog() {
   const { plants, error, loading } = usePlantSimple()
+  const [selectedPlant, setSelectedPlant] = useState(null);
 
   if (loading) return <p>Loading plants...</p>
   if (error) console.error(error)
@@ -21,9 +22,12 @@ export default function Catalog() {
       <div className="search"></div>
       <div className="plant-container">
         {plants.map((plant) => (
-          <PlantWindow key={plant.id} plant={plant} />
+          <PlantWindow key={plant.id} plant={plant} onExpand={() => setSelectedPlant(plant)}/>
         ))}
       </div>
+      {selectedPlant && (
+        <PlantPopup plant={selectedPlant} onClose={() => setSelectedPlant(null)}/>
+      )}
     </div>
   )
 }

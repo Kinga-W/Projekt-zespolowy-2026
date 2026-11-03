@@ -10,9 +10,11 @@
   --color-red: #ba3d2d;
 
   --text-color: #000;
-  --font-big: 24px;
-  --font-medium: 16px;
-  --font-small: 14px;
+  --font-XXL: 28px;
+  --font-XL: 24px;
+  --font-L: 20px;
+  --font-M: 16px;
+  --font-S: 14px;
 }
 
 * {

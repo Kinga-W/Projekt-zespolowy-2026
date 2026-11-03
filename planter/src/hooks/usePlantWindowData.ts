@@ -27,7 +27,6 @@ export default function usePlants() {
             const { data, error } = await supabase
                 .from('plant')
                 .select('id,name,name_lac,plant_type:type(name),light,light_type:light(name),watering_requirement,low_high:watering_requirement(name),plant_soil(soil_id,soil(id,name)),photo_url')
-            console.log(JSON.stringify(data, null, 2))
             if (error) {
                 setError(error.message)
             } else if (data) {

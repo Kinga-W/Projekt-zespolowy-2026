@@ -1,0 +1,99 @@
+.title-popup > h3{
+    font-size: var(--font-XXL);
+}
+
+.title-popup > h4{
+    font-size: var(--font-L);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.title-popup > h5{
+    font-size: var(--font-M);
+    font-weight: 500;
+}
+
+.plant-popup {
+  position: fixed;
+  margin: auto;
+  width: 1000px;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--color-bg-light);
+  border-radius: 22px;
+  border: 2px solid var(--color-main-dark);
+}
+
+.plant-popup::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.plant-photo-popup{
+  width: 50%;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-secondary);
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+}
+
+.plant-photo-popup > img{
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 85%;
+  border: 8px solid var(--color-secondary-light);
+  box-sizing: border-box;
+}
+
+.plant-photo-popup > .btn-fav{
+  scale: 2;
+  bottom: 105px;
+  right: 20px;
+}
+
+.plant-photo-popup > .info{
+  gap: 30px;
+}
+
+hr{
+  width: 3px;
+  height: 100%;
+  border: none;
+  background-color: var(--color-main-dark);
+}
+
+.plant-info{
+  background-color: var(--color-secondary);
+  width: 50%;
+}
+
+.title-popup{
+  background-color: var(--color-secondary-light);
+  padding: 0px 0px 3px 5px;
+  border: 7px solid var(--color-secondary-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.popup-close{
+  margin: 10px;
+  background-color: var(--color-secondary-light);
+  border: 2px solid var(--color-secondary);
+  border-radius: 20px;
+  font-weight: 600;
+  width: 30px;
+  height: 30px;
+}
