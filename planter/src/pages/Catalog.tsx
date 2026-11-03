@@ -18,7 +18,8 @@ export default function Catalog() {
   const [keyword, setKeyword] = useState("");
 
   const filteredPlants = plants.filter((plant) =>
-    plant.name.toLowerCase().includes(keyword.toLowerCase())
+    plant.name.toLowerCase().includes(keyword.toLowerCase()) ||
+    plant.name_lac.toLowerCase().includes(keyword.toLowerCase())
   );
 
   return (
