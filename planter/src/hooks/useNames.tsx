@@ -8,7 +8,7 @@ export type Name = {
 }
 
 export default function useNames() {
-    const [plants, setNames] = useState<Name[]>([])
+    const [names, setNames] = useState<Name[]>([])
     const [error, setError] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
 
@@ -22,10 +22,10 @@ export default function useNames() {
                 setError(error.message)
             } else if (data) {
                 setNames(
-                    data.map((plant: any) => ({
-                        id: plant.id,
-                        pl: plant.name,
-                        lat: plant.name_lac
+                    data.map((name: any) => ({
+                        id: name.id,
+                        pl: name.name,
+                        lat: name.name_lac
                     }))
                 )
             }
@@ -36,5 +36,5 @@ export default function useNames() {
         getNames()
     }, [])
 
-    return { plants, error, loading }
+    return { names, error, loading }
 }
