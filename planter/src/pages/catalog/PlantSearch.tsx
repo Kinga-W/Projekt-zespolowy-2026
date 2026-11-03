@@ -1,7 +1,3 @@
-import useNames from '@/hooks/useNames';
-import usePlants from '@/hooks/usePlants';
-import { useState } from 'react'
-
 interface PlantSearchProps {
   placeholder: string;
   keyword: string;
