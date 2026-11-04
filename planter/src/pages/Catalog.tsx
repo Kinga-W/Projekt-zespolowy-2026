@@ -38,7 +38,6 @@ export default function Catalog() {
         <div className="searchbar">
           <PlantSearch placeholder="Szukaj..." keyword={keyword} setKeyword={setKeyword}></PlantSearch>
         </div>
-        <PlantFilter></PlantFilter>
       </div>
       <div className="plant-container">
         {filteredPlants.length > 0 ? (

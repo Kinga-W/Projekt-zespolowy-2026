@@ -43,12 +43,6 @@ p{
     padding: 10px 10px;
 }
 
-.searchbar{
-    display: flex;
-    width: 70%;
-    padding: 5px 10px;
-}
-
 .search{
     background-color: white;
     width: 100%;
@@ -85,6 +79,12 @@ p{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+
+.plant-container p {
+    font-size: var(--font-medium);
+    color:var(--text-color);
+    
 }
 
 .plant-window{
