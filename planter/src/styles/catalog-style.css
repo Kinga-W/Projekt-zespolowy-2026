@@ -42,9 +42,10 @@ h5{
 }
 
 .plant-container p {
+    justify-self: center;
+    max-width: 100%;
     font-size: var(--font-medium);
     color:var(--text-color);
-    
 }
 
 .plant-window{

@@ -33,9 +33,13 @@ export default function Catalog() {
       <div className="plant-container">
         {filteredPlants.length > 0 ? (
           filteredPlants.map((plant) => (
-            <PlantWindow key={plant.id} plant={plant} />
+            <PlantWindow
+              key={plant.id}
+              plant={plant}
+              onExpand={() => setSelectedPlant(plant)}
+            />
           ))
-        ):(
+        ) : (
           <p>Poszukiwanej rośliny nie ma w katalogu.</p>
         )}
       </div>
