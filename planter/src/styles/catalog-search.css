@@ -1,0 +1,22 @@
+.search-container {
+    display: flex;
+    margin: auto;
+    padding: 10px 10px;
+    max-width: 100%;
+}
+
+.searchbar{
+    display: flex;
+    max-width: 100%;
+    padding: 10px 10px;
+}
+
+.search{
+    background-color: white;
+    width: 100%;
+    font-size: var(--font-medium);
+    color:var(--text-color);
+    border-radius:28px;
+    padding: 16px 16px;
+    box-shadow: 1px 1px 8px #666;
+}

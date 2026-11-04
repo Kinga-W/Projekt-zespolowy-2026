@@ -1,30 +1,28 @@
 import PlantWindow from "./catalog/PlantWindow";
-import PlantSearch from "./catalog/PlantSearch";
-import PlantFilter from "./catalog/PlantFilter";
-import usePlantSimple from '../hooks/usePlantWindowData';
-import useTypes from '../hooks/useTypes';
+import PlantPopup from "./catalog/PlantPopup";
+import "@/styles/catalog-style.css";
+import "@/styles/catalog-popup-style.css";
+import "@/styles/catalog-responsive.css";
+import "@/styles/catalog-search.css";
+import usePlantSimple from '@/hooks/usePlantWindowData';
 import { useState, useEffect } from 'react';
-import getPlantsFromDB from '../hooks/usePlants';
-import "../styles/catalog-style.css";
-import usePlants from "../hooks/usePlants";
-
-
+import PlantSearch from "./catalog/PlantSearch";
+import useTypes from "@/hooks/useTypes";
 
 export default function Catalog() {
-  const { plants, error, loading } = usePlants();
+  const [selectedPlant, setSelectedPlant] = useState(null);
+  const { plants, error, loading } = usePlantSimple()
+  const [keyword, setKeyword] = useState("");
 
   if (loading) console.log('Ładowanie roślin...');
   if (error) console.error(error);
 
-  const [keyword, setKeyword] = useState("");
 
   const { types, error: typeError, loading: typeLoading } = useTypes();
   
   if (loading) console.log('Ładowanie typów...');
   if (error) console.error(error);
-
-  console.log(types);
-
+  
 
   const filteredPlants = plants.filter((plant) =>
     plant.name.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -48,6 +46,9 @@ export default function Catalog() {
           <p>Poszukiwanej rośliny nie ma w katalogu.</p>
         )}
       </div>
+      {selectedPlant && (
+        <PlantPopup plant={selectedPlant} onClose={() => setSelectedPlant(null)}/>
+      )}
     </div>
   )
 }
