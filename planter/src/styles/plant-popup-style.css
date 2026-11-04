@@ -29,16 +29,6 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.modal-close {
-  position: sticky;
-  top: 0;
-  float: right;
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
-}
-
 .plant-photo-popup{
   width: 50%;
   height: 100%;
@@ -74,9 +64,11 @@ hr{
   background-color: var(--color-main-dark);
 }
 
-.plant-info{
+.plant-info-card{
   background-color: var(--color-secondary);
   width: 50%;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
 }
 
 .title-popup{
@@ -86,6 +78,30 @@ hr{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.infos{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:12px;
+  padding: 0 16px;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.desc{
+  padding: 12px 0 0 0;
+  text-align: center;
+}
+
+p{
+  text-indent: 10px;
+  text-align: justify;
+}
+
+section > h3 {
+  margin: 0 0 5px 0;
 }
 
 .popup-close{

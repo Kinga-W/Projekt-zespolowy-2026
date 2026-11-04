@@ -59,7 +59,7 @@ nav {
 
 main {
   background-color: var(--color-secondary-light);
-  background-image: url('../../public/bg-pattern.png');
+  background-image: url('/bg-pattern.png');
 }
 
 button{

@@ -53,27 +53,41 @@ export default function PlantPopup({ plant, onClose }) {
         <PlantIcons key={plant.id} plant={plant}></PlantIcons>
       </div>
       <hr/>
-      <div className="plant-info">
+      <div className="plant-info-card">
         <div className="title-popup">
           <div>
             <h3>{plant.name}</h3>
             <h4>łac. {plant.name_lac}</h4>
             <h5>rodzina: {plant.type}</h5>
           </div>
-          <button className="popup-close">X</button>
+          <button className="popup-close" onClick={onClose}>X</button>
         </div>
-        <p>Opis {plant.desc}</p>
-        <h6>Zapotrzebowanie:</h6>
-        <p>Nasłonecznienie: {plant.light_alt}</p>
-        <p>Nawodnienie: {plant.water_alt}</p>
-        <p>Gleba: {plant.soil.map(s => s.name).join(', ')}</p>
-        <p>Preferowana temperatura: {plant.temp_min} - {plant.temp_max}</p>
-        <p>Preferowane ph: {plant.ph_max} - {plant.ph_min}</p>
-        <p>Nawożenie: {plant.fert}</p>
-        <p>Trudność dbania: {plant.diff}</p>
-        <p>Okres siania: {plant.plantseason}</p>
-        <p>Długość wzrostu: {plant.grow_time}</p>
-        <p>Dbanie: {plant.care_desc}</p>
+        <div className="infos">
+          <h4 className="desc">{plant.desc}</h4>
+          <section>
+            <h3>Warunki i zapotrzebowanie</h3>
+            <ul>
+              <li><strong>Nasłonecznienie:</strong> {plant.light_alt}</li>
+              <li><strong>Nawodnienie:</strong> {plant.water_alt}</li>
+              <li><strong>Gleba:</strong> {plant.soil.map(s => s.name).join(', ')}</li>
+              <li><strong>Temperatura:</strong> {plant.temp_min} - {plant.temp_max} °C</li>
+              <li><strong>pH gleby:</strong> {plant.ph_min} - {plant.ph_max}</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Uprawa i wzrost</h3>
+            <ul>
+              <li><strong>Trudność dbania:</strong> {plant.care_diff}/5</li>
+              <li><strong>Okres siania:</strong> {plant.planting_time}</li>
+              <li><strong>Długość wzrostu:</strong> {plant.growing_time}</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Pielęgnacja</h3>
+            <p><strong>Nawożenie:</strong> {plant.fert}</p>
+            <p><strong>Dbanie:</strong> {plant.care_desc}</p>
+          </section>
+        </div>
       </div>
     </dialog>
   )
