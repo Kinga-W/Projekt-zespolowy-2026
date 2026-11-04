@@ -1,0 +1,91 @@
+@media (max-width: 1400px) {
+  .plant-container {
+    grid-template-columns: repeat(3, 318px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .plant-container {
+    grid-template-columns: repeat(2, 318px);
+  }
+}
+
+@media (max-width: 710px) {
+  .plant-container {
+    grid-template-columns: 318px;
+  }
+}
+
+@media (max-width: 370px) {
+  .catalog{
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .plant-popup{
+    flex-direction: column-reverse;
+    height:700px;
+  }
+
+  .plant-info-card{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .popup-close{
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-L);
+  }
+
+  hr{
+    height: 3px;
+    width: 100%;
+  }
+
+  .plant-photo-popup{
+    width: 100%;
+    height: 25%;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .plant-photo-popup > img{
+    width: 100%;
+    height: 55%;
+  }
+
+  .plant-photo-popup > .btn-fav{
+    scale: 2.5;
+    bottom: 95px;
+    right: 30px;
+  }
+
+  .plant-photo-popup > .info{
+    gap: 30px;
+  }
+
+  .info > img{
+    scale: 0.8;
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .plant-popup{
+    flex-direction: column-reverse;
+    height:fit-content;
+  }
+  .plant-photo-popup{
+    width: 100%;
+    height: 155px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .plant-photo-popup > img{
+    width: 100%;
+    height: 55%;
+  }
+}
