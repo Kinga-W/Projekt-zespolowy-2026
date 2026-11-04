@@ -25,11 +25,9 @@ export default function Catalog() {
   return (
     <div className="catalog">
       <h2>Katalog roślin</h2>
-      <div className="search-container">
         <div className="searchbar">
           <PlantSearch placeholder="Szukaj..." keyword={keyword} setKeyword={setKeyword}></PlantSearch>
         </div>
-      </div>
       <div className="plant-container">
         {filteredPlants.length > 0 ? (
           filteredPlants.map((plant) => (
