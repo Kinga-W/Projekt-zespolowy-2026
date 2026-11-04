@@ -29,6 +29,7 @@ h5{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
 .plant-container{
@@ -39,6 +40,13 @@ h5{
     padding: 16px;
     max-width: 100%;
     box-sizing: border-box;
+}
+
+.plant-container p {
+    justify-self: center;
+    max-width: 100%;
+    font-size: var(--font-medium);
+    color:var(--text-color);
 }
 
 .plant-window{

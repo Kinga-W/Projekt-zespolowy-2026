@@ -1,0 +1,15 @@
+.searchbar{
+    display: flex;
+    padding: 10px 10px;
+    max-width: 100%;
+}
+
+.search{
+    background-color: white;
+    width: 100%;
+    font-size: var(--font-medium);
+    color:var(--text-color);
+    border-radius:28px;
+    padding: 10px 10px;
+    box-shadow: 1px 1px 8px #666;
+}
