@@ -1,14 +1,14 @@
 .search-container {
     display: flex;
     margin: auto;
-    padding: 10px 10px;
+    padding: 5px 5px;
     max-width: 100%;
 }
 
 .searchbar{
     display: flex;
     max-width: 100%;
-    padding: 10px 10px;
+    padding: 5px 5px;
 }
 
 .search{
@@ -17,6 +17,6 @@
     font-size: var(--font-medium);
     color:var(--text-color);
     border-radius:28px;
-    padding: 16px 16px;
+    padding: 10px 10px;
     box-shadow: 1px 1px 8px #666;
 }
