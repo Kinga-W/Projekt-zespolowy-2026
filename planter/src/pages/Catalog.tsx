@@ -7,7 +7,6 @@ import "@/styles/catalog-search.css";
 import usePlantSimple from '@/hooks/usePlantWindowData';
 import { useState, useEffect } from 'react';
 import PlantSearch from "./catalog/PlantSearch";
-import useTypes from "@/hooks/useTypes";
 
 export default function Catalog() {
   const [selectedPlant, setSelectedPlant] = useState(null);
@@ -15,12 +14,6 @@ export default function Catalog() {
   const [keyword, setKeyword] = useState("");
 
   if (loading) console.log('Ładowanie roślin...');
-  if (error) console.error(error);
-
-
-  const { types, error: typeError, loading: typeLoading } = useTypes();
-  
-  if (loading) console.log('Ładowanie typów...');
   if (error) console.error(error);
   
 
