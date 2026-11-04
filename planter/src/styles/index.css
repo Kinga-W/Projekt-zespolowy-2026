@@ -62,6 +62,10 @@ main {
   background-image: url('/bg-pattern.png');
 }
 
+body:has(.plant-popup:modal) {
+    overflow: hidden;
+}
+
 button{
   transition: filter 0.2s ease;
 }
@@ -69,10 +73,4 @@ button{
 button:hover {
   filter: brightness(85%);
   cursor: pointer;
-}
-
-@media (max-width: 1400px) {
-    .main {
-        width: 95%;
-    }
 }
