@@ -70,3 +70,9 @@ button:hover {
   filter: brightness(85%);
   cursor: pointer;
 }
+
+@media (max-width: 1400px) {
+    .main {
+        width: 95%;
+    }
+}

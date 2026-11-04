@@ -1,6 +1,8 @@
 import PlantWindow from "./catalog/PlantWindow";
 import PlantPopup from "./catalog/PlantPopup";
 import "@/styles/catalog-style.css";
+import "@/styles/catalog-popup-style.css";
+import "@/styles/catalog-responsive.css";
 import usePlantSimple from '@/hooks/usePlantWindowData'
 import { useState, useEffect } from 'react'
 

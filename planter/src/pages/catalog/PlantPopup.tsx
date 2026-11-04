@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import type { Plant } from '@/hooks/usePlantWindowData';
 import PlantIcons from './PlantIcons';
-import "@/styles/plant-popup-style.css";
 
 export default function PlantPopup({ plant, onClose }) {
   const path = "/catalog-photos/";
