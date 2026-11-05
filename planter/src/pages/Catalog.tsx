@@ -5,7 +5,7 @@ import "@/styles/catalog-popup-style.css";
 import "@/styles/catalog-responsive.css";
 import "@/styles/catalog-search.css";
 import usePlantSimple from '@/hooks/usePlantWindowData';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PlantSearch from "./catalog/PlantSearch";
 
 export default function Catalog() {
@@ -26,19 +26,22 @@ export default function Catalog() {
     <div className="catalog">
       <h2>Katalog roślin</h2>
       <div className="search-container">
-        <div className="searchbar">
-          <PlantSearch placeholder="Szukaj..." keyword={keyword} setKeyword={setKeyword}></PlantSearch>
+        <PlantSearch placeholder="Szukaj..." keyword={keyword} setKeyword={setKeyword}></PlantSearch>
+      </div>
+      {filteredPlants.length > 0 ? (
+        <div className="plant-container">
+          {filteredPlants.map((plant) => (
+            <PlantWindow key={plant.id} plant={plant} onExpand={() => setSelectedPlant(plant)}/>
+          ))}
         </div>
-      </div>
-      <div className="plant-container">
-        {filteredPlants.length > 0 ? (
-          filteredPlants.map((plant) => (
-            <PlantWindow key={plant.id} plant={plant} />
-          ))
         ):(
-          <p>Poszukiwanej rośliny nie ma w katalogu.</p>
+          <>
+          <p className="no-plant">Poszukiwanej rośliny nie ma w katalogu.</p>
+            <div className="plant-container">
+              <pre> </pre>
+            </div>
+          </>
         )}
-      </div>
       {selectedPlant && (
         <PlantPopup plant={selectedPlant} onClose={() => setSelectedPlant(null)}/>
       )}
