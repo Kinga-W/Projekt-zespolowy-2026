@@ -10,7 +10,7 @@
     font-size: var(--font-medium);
     color:var(--text-color);
     border-radius:28px;
-    padding: 16px 16px;
+    padding: 10px 10px;
     box-shadow: 1px 1px 8px #666;
 }
 
