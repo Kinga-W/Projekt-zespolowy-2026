@@ -4,13 +4,13 @@ import Account from './pages/Account';
 import Scanner from './pages/Scanner';
 import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
-import logo from './assets/placeholder.png';
+import logo from '/placeholder.png';
 
 export default function App() {
   return (
     <BrowserRouter>
       <header>
-        <Link to="/"><img src={logo} alt="logo" />Strona Główna</Link>
+        <Link to="/"><img className="logo" src={logo} alt="logo" />Strona Główna</Link>
         <nav>
           <Link to="/catalog">Katalog</Link>
           <Link to="/planner">Planner</Link>
@@ -18,14 +18,15 @@ export default function App() {
           <Link to="/account">Moje Konto</Link>
         </nav>
       </header>
-
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/account" element={<Account />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/planner" element={<Planner />} />
-        <Route path="/scanner" element={<Scanner />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/account" element={<Account />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/planner" element={<Planner />} />
+          <Route path="/scanner" element={<Scanner />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
