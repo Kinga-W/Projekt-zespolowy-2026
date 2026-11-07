@@ -42,13 +42,6 @@ h5{
     box-sizing: border-box;
 }
 
-.plant-container p {
-    justify-self: center;
-    max-width: 100%;
-    font-size: var(--font-medium);
-    color:var(--text-color);
-}
-
 .plant-window{
     background: linear-gradient(to bottom left, var(--color-secondary-light), var(--color-secondary));
     overflow: wrap;
