@@ -3,9 +3,9 @@
   --color-bg-light: #F9F6F0;
   --color-main: #dacaa9;
   --color-main-dark: #ccb992;
-  --color-secondary: #505c2a;
-  --color-secondary-light: #6d7e35;
-  --color-secondary-dark: #4b5726;
+  --color-secondary: rgb(91,106,39);
+  --color-secondary-light: rgb(134,155,60);
+  --color-secondary-dark: rgb(76, 90, 27);
   --color-third: #ba892d;
   --color-red: #ba3d2d;
 
