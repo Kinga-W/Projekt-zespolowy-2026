@@ -72,7 +72,7 @@
     margin: 0 8px;
   }
 
-  @media (max-height: 800px) {
+  @media (max-height: 950px) {
     .plant-info{
       height:fit-content;
     }
