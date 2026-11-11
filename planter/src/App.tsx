@@ -1,12 +1,21 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react'
 import Home from './pages/Home';
 import Account from './pages/Account';
 import Scanner from './pages/Scanner';
 import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
 import logo from '/placeholder.png';
+import {supabase} from './utils/supabase';
+import { useAuth } from './hooks/useAuth'
 
 export default function App() {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <p>Ładowanie...</p>
+  }
+
   return (
     <BrowserRouter>
       <header>
@@ -15,7 +24,13 @@ export default function App() {
           <Link to="/catalog">Katalog</Link>
           <Link to="/planner">Planner</Link>
           <Link to="/scanner">Skaner</Link>
-          <Link to="/account">Moje Konto</Link>
+          {!loading && (
+            user ? (
+              <Link to="/account?view=profile">Twój profil</Link>
+            ) : (
+              <Link to="/account?view=login">Zaloguj się</Link>
+            )
+          )}
         </nav>
       </header>
       <main>
