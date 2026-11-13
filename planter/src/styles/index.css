@@ -17,6 +17,16 @@
   --font-S: 14px;
 }
 
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 * {
   margin: 0;
 }
@@ -61,6 +71,7 @@ nav {
 main {
   background-color: var(--color-secondary-light);
   background-image: url('/bg-pattern.png');
+  height: 100%;
 }
 
 body:has(.plant-popup:modal) {

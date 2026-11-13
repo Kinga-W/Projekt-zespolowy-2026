@@ -23,6 +23,7 @@ export default function Catalog() {
   );
 
   return (
+    <main>
     <div className="catalog">
       <h2>Katalog roślin</h2>
       <div className="search-container">
@@ -46,5 +47,6 @@ export default function Catalog() {
         <PlantPopup plant={selectedPlant} onClose={() => setSelectedPlant(null)}/>
       )}
     </div>
+    </main>
   )
 }

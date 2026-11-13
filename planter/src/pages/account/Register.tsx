@@ -3,9 +3,11 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import {supabase} from '@/utils/supabase';
 
 export default function Register() {
-  const [, setSearchParams] = useSearchParams();
+  const navigate = useNavigate()
+  const [, setSearchParams] = useSearchParams()
 
   const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
@@ -13,8 +15,8 @@ export default function Register() {
     e.preventDefault()
     setError('')
 
-    const { error } = await supabase.auth.signUp({
-      username,
+    const { data, error } = await supabase.auth.signUp({
+      email,
       password,
     })
 
@@ -23,12 +25,19 @@ export default function Register() {
       return
     }
 
-    const navigate = useNavigate()
+    const { error: profileError } = await supabase
+      .from("profile")
+      .insert({
+        uuid: data.user.id,
+        username: username,
+    });
+
     navigate('/account?view=profile')
   }
 
   return (
-    <div className="login-popup">
+    <main className="login-main">
+    <div className="login-form">
       <h2>Rejestracja</h2>
       <form onSubmit={handleRegister}>
         <label>
@@ -42,9 +51,19 @@ export default function Register() {
           </input>
         </label>
         <label>
+          Email
+          <input 
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required>
+          </input>
+        </label>
+        <label>
           Hasło
           <input 
-            type="text"
+            type="password"
             placeholder="Hasło"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -55,5 +74,6 @@ export default function Register() {
       </form>
       <button onClick={() => setSearchParams("view=login")}>Logowanie</button>
     </div>
+    </main>
   )
 }

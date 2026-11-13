@@ -3,6 +3,7 @@ import { useAuth } from '../hooks/useAuth';
 import Login from './account/Login';
 import Register from './account/Register';
 import Profile from './account/Profile';
+import "@/styles/account-form.css";
 
 export default function Account() {
   const [searchParams] = useSearchParams();

@@ -33,7 +33,6 @@ export default function App() {
           )}
         </nav>
       </header>
-      <main>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/account" element={<Account />} />
@@ -41,7 +40,6 @@ export default function App() {
           <Route path="/planner" element={<Planner />} />
           <Route path="/scanner" element={<Scanner />} />
         </Routes>
-      </main>
     </BrowserRouter>
   );
 }

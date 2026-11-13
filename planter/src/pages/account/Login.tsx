@@ -3,9 +3,10 @@ import { useSearchParams, useNavigate } from "react-router-dom";
 import {supabase} from '@/utils/supabase';
 
 export default function Login() { 
+  const navigate = useNavigate()
   const [, setSearchParams] = useSearchParams();
 
-  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
@@ -14,7 +15,7 @@ export default function Login() {
     setError('')
 
     const { error } = await supabase.auth.signInWithPassword({
-      username,
+      email,
       password,
     })
 
@@ -23,29 +24,29 @@ export default function Login() {
       return
     }
 
-    const navigate = useNavigate()
     navigate('/account?view=profile')
   }
 
 
   return (
-    <div className="login-popup">
+    <main className="login-main">
+    <div className="login-form">
       <h2>Logowanie</h2>
       <form onSubmit={handleLogin}>
         <label>
-          Nazwa użytkownika
+          Email
           <input 
-            type="text"
-            placeholder="Nazwa użytkownika"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required>
           </input>
         </label>
         <label>
           Hasło
           <input 
-            type="text"
+            type="password"
             placeholder="Hasło"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -56,5 +57,6 @@ export default function Login() {
       </form>
       <button onClick={() => setSearchParams("view=register")}>Rejestracja</button>
     </div>
+    </main>
   );
 }
