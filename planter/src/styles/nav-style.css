@@ -20,7 +20,7 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  font-size: 20px;
+  font-size: var(--font-XL);
 }
 
 /* desktop */
