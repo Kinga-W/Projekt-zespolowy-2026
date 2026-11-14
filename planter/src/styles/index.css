@@ -56,6 +56,7 @@ Link {
 main {
   background-color: var(--color-secondary-light);
   background-image: url('/bg-pattern.png');
+  heigth: 100%;
 }
 
 body:has(.plant-popup:modal) {
@@ -69,4 +70,12 @@ button{
 button:hover {
   filter: brightness(85%);
   cursor: pointer;
+}
+
+footer{
+  background-color: var(--color-secondary);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
