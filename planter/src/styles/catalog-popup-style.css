@@ -65,7 +65,7 @@ hr{
 }
 
 .plant-info-card{
-  background-color: var(--color-secondary);
+  background: linear-gradient(to bottom left, var(--color-secondary-light), var(--color-secondary));
   width: 50%;
   border-radius: 0 8px 8px 0;
   overflow: hidden;
@@ -76,8 +76,8 @@ hr{
 
 .title-popup{
   background-color: var(--color-secondary-light);
-  padding: 0px 0px 3px 5px;
-  border: 7px solid var(--color-secondary-light);
+  padding: 7px 7px 10px 12px;
+  border-bottom: 1px solid var(--color-secondary);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

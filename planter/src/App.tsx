@@ -40,6 +40,10 @@ export default function App() {
           <Route path="/planner" element={<Planner />} />
           <Route path="/scanner" element={<Scanner />} />
         </Routes>
+      <footer>
+        <p>Dziękujemy za odwiedzenie naszej strony!</p>
+        <p>© 2026 PlantPlanner v0.1.1 Wszelkie prawa zastrzeżone.</p>
+      </footer>
     </BrowserRouter>
   );
 }

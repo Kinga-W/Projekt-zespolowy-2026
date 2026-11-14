@@ -25,12 +25,12 @@
 @media (max-width: 850px) {
   .plant-popup{
     flex-direction: column-reverse;
-    height:700px;
+    min-height:650px;
+    height: fit-content;
   }
 
   .plant-info-card{
     width: 100%;
-    height: 100%;
     border-radius: 8px 8px 0 0;
   }
 
@@ -48,18 +48,18 @@
 
   .plant-photo-popup{
     width: 100%;
-    height: 25%;
+    height: 170px;
     border-radius: 0 0 8px 8px;
   }
 
   .plant-photo-popup > img{
     width: 100%;
-    height: 55%;
+    height: 90px;
   }
 
   .plant-photo-popup > .btn-fav{
     scale: 2.5;
-    bottom: 95px;
+    bottom: 105px;
     right: 30px;
   }
 
@@ -71,6 +71,45 @@
     scale: 0.8;
     margin: 0 8px;
   }
+
+  @media (max-height: 950px) {
+    .plant-info{
+      height:fit-content;
+    }
+
+    .plant-photo-popup{
+    width: 100%;
+      min-height: 170px;
+    }
+
+    .plant-popup{
+      min-height: auto;
+    }
+  }
+
+  @media (max-height: 550px) {
+    .plant-photo-popup{
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 850px){
+  @media (max-height: 600px){
+    .info{
+      min-height: 80px;
+      height: 80px;
+      flex-shrink: 0;
+    }
+    .plant-photo-popup > img{
+      min-height: 0;
+      min-width: 0;
+    }
+    .plant-photo-popup{
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 @media (max-width: 560px) {
@@ -78,14 +117,6 @@
     flex-direction: column-reverse;
     height:fit-content;
   }
-  .plant-photo-popup{
-    width: 100%;
-    height: 155px;
-    border-radius: 0 0 8px 8px;
-  }
 
-  .plant-photo-popup > img{
-    width: 100%;
-    height: 55%;
-  }
 }
+
