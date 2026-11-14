@@ -5,6 +5,7 @@ import Account from './pages/Account';
 import Scanner from './pages/Scanner';
 import Catalog from './pages/Catalog';
 import Planner from './pages/Planner';
+import Nav from './navbar/Nav';
 import logo from '/placeholder.png';
 import {supabase} from './utils/supabase';
 import { useAuth } from './hooks/useAuth'
@@ -19,19 +20,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <header>
-        <Link to="/"><img className="logo" src={logo} alt="logo" />Strona Główna</Link>
-        <nav>
-          <Link to="/catalog">Katalog</Link>
-          <Link to="/planner">Planner</Link>
-          <Link to="/scanner">Skaner</Link>
-          {!loading && (
-            user ? (
-              <Link to="/account?view=profile">Twój profil</Link>
-            ) : (
-              <Link to="/account?view=login">Zaloguj się</Link>
-            )
-          )}
-        </nav>
+        <Nav />
       </header>
         <Routes>
           <Route path="/" element={<Home />}/>
