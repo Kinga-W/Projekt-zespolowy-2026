@@ -17,6 +17,12 @@
   --font-S: 14px;
 }
 
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 * {
   margin: 0;
 }
@@ -56,6 +62,8 @@ Link {
 main {
   background-color: var(--color-secondary-light);
   background-image: url('/bg-pattern.png');
+  height: 100%;
+  flex: 1;
 }
 
 body:has(.plant-popup:modal) {
@@ -69,4 +77,12 @@ button{
 button:hover {
   filter: brightness(85%);
   cursor: pointer;
+}
+
+footer {
+  background-color: var(--color-secondary);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
