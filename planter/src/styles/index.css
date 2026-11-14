@@ -3,9 +3,9 @@
   --color-bg-light: #F9F6F0;
   --color-main: #dacaa9;
   --color-main-dark: #ccb992;
-  --color-secondary: rgb(91,106,39);
-  --color-secondary-light: rgb(134,155,60);
-  --color-secondary-dark: rgb(76, 90, 27);
+  --color-secondary: #505c2a;
+  --color-secondary-light: #6d7e35;
+  --color-secondary-dark: #4b5726;
   --color-third: #ba892d;
   --color-red: #ba3d2d;
 
@@ -15,16 +15,6 @@
   --font-L: 20px;
   --font-M: 16px;
   --font-S: 14px;
-}
-
-#root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
 }
 
 * {
@@ -50,7 +40,7 @@ header {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 20px;
+  font-size: var(--font-L);
 }
 
 Link {
@@ -63,11 +53,9 @@ Link {
   border-radius: 100px;
 }
 
-
 main {
   background-color: var(--color-secondary-light);
   background-image: url('/bg-pattern.png');
-  height: 100%;
 }
 
 body:has(.plant-popup:modal) {
@@ -81,12 +69,4 @@ button{
 button:hover {
   filter: brightness(85%);
   cursor: pointer;
-}
-
-footer{
-  background-color: var(--color-secondary);
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
