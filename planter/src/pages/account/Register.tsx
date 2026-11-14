@@ -1,19 +1,31 @@
 import { useState, useEffect, useRef } from 'react'
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {supabase} from '@/utils/supabase';
 
 export default function Register() {
   const navigate = useNavigate()
-  const [, setSearchParams] = useSearchParams()
 
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [password2nd, setPassword2nd] = useState('')
   const [error, setError] = useState('')
+  const [errorMessage, setErrorMessage] = useState("")
 
   async function handleRegister(e: React.FormEvent) {
     e.preventDefault()
-    setError('')
+    setError('');
+    setErrorMessage('');
+
+    if (password !== password2nd) {
+      setErrorMessage('Hasła muszą być identyczne.');
+      return;
+    }
+
+    if (password.length < 6) {
+      setErrorMessage('Hasło musi mieć minimum 6 znaków.');
+      return;
+    }
 
     const { data, error } = await supabase.auth.signUp({
       email,
@@ -21,8 +33,20 @@ export default function Register() {
     })
 
     if (error) {
-      setError('Nieprawidłowy email lub hasło.')
-      return
+      if (
+        error.message.toLowerCase().includes('already registered') ||
+        error.message.toLowerCase().includes('already exists')
+      ) {
+      setErrorMessage('Ten adres e-mail jest już zajęty.');
+      } else {
+        setErrorMessage(error.message);
+      }
+      return;
+    }
+
+    if (!data.user) {
+      setErrorMessage('Nie udało się utworzyć konta.');
+      return;
     }
 
     const { error: profileError } = await supabase
@@ -32,14 +56,20 @@ export default function Register() {
         username: username,
     });
 
+    if (profileError) {
+      setErrorMessage('Nie udało się utworzyć profilu.');
+      console.error(profileError);
+      return;
+    }
+
     navigate('/account?view=profile')
   }
 
   return (
     <main className="login-main">
-    <div className="login-form">
+    <div className="form-container">
       <h2>Rejestracja</h2>
-      <form onSubmit={handleRegister}>
+      <form className="login-form" onSubmit={handleRegister}>
         <label>
           Nazwa użytkownika
           <input 
@@ -70,9 +100,20 @@ export default function Register() {
             required>
           </input>
         </label>
+        <label>
+          Powtórz hasło
+          <input 
+            type="password"
+            placeholder="Powtórz hasło"
+            value={password2nd}
+            onChange={(e) => setPassword2nd(e.target.value)}
+            required>
+          </input>
+        </label>
+        <p>{errorMessage}</p>
         <button type="submit">Zarejestruj</button>
       </form>
-      <button onClick={() => setSearchParams("view=login")}>Logowanie</button>
+      <button onClick={() => navigate('/account?view=login')}>Logowanie</button>
     </div>
     </main>
   )

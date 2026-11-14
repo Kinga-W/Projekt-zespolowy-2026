@@ -3,40 +3,52 @@
   box-sizing: border-box;
 }
 
-.login-form{
+.form-container > h2{
+  padding: 10px;
+  background-color: var(--color-bg-light);
+  margin: 26px 0;
+}
+
+.form-container{
   width: 400px;
-  height: 600px;
+  height: fit-content;
   margin: auto;
-  background-color: var(--color-main);
-  border: 3px solid var(--color-bg);
+  padding-bottom: 20px;
+  background-color: var(--color-bg);
+  border: 3px solid var(--color-main);
   border-radius: 30px;
-}
-
-button{
-  display: flex;
-  margin: auto;
-  padding: 5px 15px;
-  margin: 10px;
-  border-radius: 20px;
-}
-
-form{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
-label{
+.form-container > button, .login-form > button{
+  margin: auto;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  border: 2px solid var(--color-main-dark);
+  background-color: var(--color-main);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-form > label{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 
-label > input{
+.login-form > label > input{
   width: 16rem;
-  padding: 5px 15px;
+  padding: 8px 16px;
   border-radius: 20px;
-  border: 2px solid var(--color-bg);
+  border: 2px solid var(--color-main);
+  background-color: var(--color-bg-light);
 }

@@ -1,16 +1,18 @@
 import { useState, useEffect, useRef } from 'react'
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {supabase} from '@/utils/supabase';
+import MessageWindow from '../popups/message-window';
 
 export default function Login() { 
   const navigate = useNavigate()
-  const [, setSearchParams] = useSearchParams();
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [errorMessage, setErrorMessage] = useState("")
 
   async function handleLogin(e: React.FormEvent) {
+
     e.preventDefault()
     setError('')
 
@@ -20,8 +22,12 @@ export default function Login() {
     })
 
     if (error) {
-      setError('Nieprawidłowy email lub hasło.')
-      return
+      if (error.message === 'Invalid login credentials') {
+        setErrorMessage('Nieprawidłowy email lub hasło.');
+      } else {
+        setErrorMessage('Wystąpił błąd podczas logowania.');
+      }
+      return;
     }
 
     navigate('/account?view=profile')
@@ -30,9 +36,9 @@ export default function Login() {
 
   return (
     <main className="login-main">
-    <div className="login-form">
+    <div className="form-container">
       <h2>Logowanie</h2>
-      <form onSubmit={handleLogin}>
+      <form className="login-form" onSubmit={handleLogin}>
         <label>
           Email
           <input 
@@ -45,7 +51,7 @@ export default function Login() {
         </label>
         <label>
           Hasło
-          <input 
+          <input
             type="password"
             placeholder="Hasło"
             value={password}
@@ -53,9 +59,10 @@ export default function Login() {
             required>
           </input>
         </label>
+        <p>{errorMessage}</p>
         <button type="submit">Zaloguj</button>
       </form>
-      <button onClick={() => setSearchParams("view=register")}>Rejestracja</button>
+      <button onClick={() => navigate('/account?view=register')}>Rejestracja</button>
     </div>
     </main>
   );
