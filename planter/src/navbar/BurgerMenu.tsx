@@ -36,9 +36,9 @@ export default function BurgerMenu({ user }: BurgerMenuProps) {
             <Link to="/planner" onClick={toggleMenu} >Planner</Link>
             <Link to="/scanner" onClick={toggleMenu} >Skaner</Link>
             {user ? (
-              <Link to="/account?view=profile">Twój profil</Link>
+              <Link to="/account?view=profile" onClick={toggleMenu}>Twój profil</Link>
             ) : (
-              <Link to="/account?view=login">Zaloguj się</Link>
+              <Link to="/account?view=login" onClick={toggleMenu}>Zaloguj się</Link>
             )}
         </nav>
       )}
