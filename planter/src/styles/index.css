@@ -18,16 +18,20 @@
 }
 
 #root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
   margin: 0;
 }
 
-a, a:hover, a:active, a:link, a:visited{
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
   text-decoration: none;
   color: var(--text-color);
 }
@@ -39,7 +43,7 @@ body {
 header {
   width: 100%;
   box-sizing: border-box;
-  height:60px;
+  height: 60px;
   background-color: var(--color-main);
   display: flex;
   align-items: center;
@@ -51,7 +55,7 @@ header {
 
 Link {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 .logo {
@@ -67,10 +71,10 @@ main {
 }
 
 body:has(.plant-popup:modal) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-button{
+button {
   transition: filter 0.2s ease;
 }
 
