@@ -30,7 +30,6 @@ body {
   margin: 0;
 }
 
-
 header {
   width: 100%;
   box-sizing: border-box;
@@ -41,6 +40,7 @@ header {
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 20px;
 }
 
 Link {
@@ -53,10 +53,6 @@ Link {
   border-radius: 100px;
 }
 
-nav {
-  display: flex;
-  gap: 20px;
-}
 
 main {
   background-color: var(--color-secondary-light);
