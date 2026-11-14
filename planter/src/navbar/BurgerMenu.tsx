@@ -2,7 +2,11 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '@/styles/nav-style.css';
 
-export default function BurgerMenu() {
+interface BurgerMenuProps {
+  user: boolean;
+}
+
+export default function BurgerMenu({ user }: BurgerMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,7 +35,11 @@ export default function BurgerMenu() {
             <Link to="/catalog" onClick={toggleMenu} >Katalog</Link>
             <Link to="/planner" onClick={toggleMenu} >Planner</Link>
             <Link to="/scanner" onClick={toggleMenu} >Skaner</Link>
-            <Link to="/account" onClick={toggleMenu} >Zaloguj się</Link>
+            {user ? (
+              <Link to="/account?view=profile">Twój profil</Link>
+            ) : (
+              <Link to="/account?view=login">Zaloguj się</Link>
+            )}
         </nav>
       )}
     </div>
