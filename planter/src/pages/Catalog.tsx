@@ -23,9 +23,10 @@ export default function Catalog() {
   );
 
   return (
+    <main>
     <div className="catalog">
       <h2>Katalog roślin</h2>
-      <div className="search-container">
+      <div className="searchbar">
         <PlantSearch placeholder="Szukaj..." keyword={keyword} setKeyword={setKeyword}></PlantSearch>
       </div>
       {filteredPlants.length > 0 ? (
@@ -46,5 +47,6 @@ export default function Catalog() {
         <PlantPopup plant={selectedPlant} onClose={() => setSelectedPlant(null)}/>
       )}
     </div>
+    </main>
   )
 }
