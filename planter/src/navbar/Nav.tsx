@@ -1,6 +1,6 @@
 import BurgerMenu from "./BurgerMenu";
 import { Link } from 'react-router-dom';
-import logo from '/placeholder.png';
+import logo from '/logo.png';
 import {supabase} from '@/utils/supabase';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -35,7 +35,7 @@ export default function Nav() {
 
       <div className="mobile-nav">
         <div className="logo-container">
-          <Link to="/" className="logo-link"><img className="logo-img" src={logo} alt="logo" />PlantHelper</Link>
+          <Link to="/" className="logo-link"><img className="logo-img" src={logo} alt="logo" />PlantPlanner</Link>
         </div>
           <BurgerMenu user= {(user==null) ? false : true} />
       </div>
