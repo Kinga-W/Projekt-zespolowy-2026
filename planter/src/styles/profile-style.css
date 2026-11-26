@@ -1,0 +1,103 @@
+.profile-main{
+  display: flex;
+}
+
+.profile-container{
+  background-color: var(--color-bg);
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.profile-card{
+  background: linear-gradient(to bottom left, var(--color-secondary-light), var(--color-secondary));
+  width: 700px;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 22px;
+  border: 2px solid var(--color-secondary-dark);
+  gap: 10px;
+}
+
+.profile-card > img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--color-secondary-dark);
+}
+
+.profile-info{
+  background-color: var(--color-main);
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px var(--color-secondary);
+  border: 2px solid var(--color-secondary-dark);
+}
+
+.profile-info > h3{
+  background-color: var(--color-third);
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+
+.profile-info > h4{
+  padding: 4px 8px;
+}
+
+.profile-options{
+  width: 80px;
+  min-width: 80px;
+  background-color: var(--color-bg-light);
+  border-radius: 12px;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  height: fit-content;
+}
+
+.profile-option-button{
+  border: none;
+  background-color: var(--color-third);
+  height: 40px;
+  width: 100%;
+}
+
+.user-saved-section{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-bg-light);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--color-main);
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px var(--color-main);
+}
+
+.fav-plant-container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 16px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.section-title{}
+
+.section-content{}
