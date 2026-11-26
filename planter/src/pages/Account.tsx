@@ -5,6 +5,7 @@ import Register from './account/Register';
 import Profile from './account/Profile';
 import "@/styles/account-form.css";
 import "@/styles/profile-style.css";
+import "@/styles/profile-responsive.css";
 
 export default function Account() {
   const [searchParams] = useSearchParams();
@@ -15,8 +16,6 @@ export default function Account() {
   if (loading) {
     return <p>Ładowanie...</p>
   }
-
-  //const { data } = await supabase.auth.getSession()
 
   return (
     <>

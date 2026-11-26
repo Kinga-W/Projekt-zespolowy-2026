@@ -29,12 +29,17 @@ export type Plant = {
     growing_time: string    
 }
 
-export default function usePlants(id: number) {
+export default function usePlants(id?: number) {
     const [favPlants, setFavPlants] = useState<Plant[]>([])
     const [error, setError] = useState<string | null>(null)
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        //użytkownik się jeszcze nie wczytał
+        if (id === undefined) {
+            return;
+        }
+
         if (!id) {
             setFavPlants([]);
             setLoading(false);
