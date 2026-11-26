@@ -1,0 +1,84 @@
+.profile-main{
+  display: flex;
+}
+
+.profile-container{
+  background-color: var(--color-bg);
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.profile-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.profile-card{
+  background-color: var(--color-bg-light);
+  width: 700px;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 22px;
+  gap: 10px;
+}
+
+.profile-card > img{
+  width: 200px;
+  border-radius: 12px;
+}
+
+.profile-info{
+  background-color: var(--color-bg);
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.profile-info > h3{
+  background-color: var(--color-main);
+  padding: 8px 10px;
+}
+
+.profile-info > h4{
+  padding: 4px 8px;
+}
+
+.profile-options{
+  width: fit-content;
+  background-color: var(--color-bg-light);
+  border-radius: 12px;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.profile-option-button{
+  border: none;
+  background-color: var(--color-main);
+  height: 40px;
+  width: 80px;
+}
+
+.user-saved-section{
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-bg-light);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid var(--color-main);
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px var(--color-main);
+}
+
+.section-title{}
+
+.section-content{}
