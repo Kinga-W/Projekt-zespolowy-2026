@@ -6,11 +6,14 @@
   position: static;
   transform: none;
   white-space: nowrap;
+  padding: 2px;
 }
 
 .logo-img {
   width: 40px;
   height: auto;
+  background: none;
+
 }
 
 .logo-link {
@@ -20,7 +23,8 @@
   padding: 0;
   text-decoration: none;
   color: inherit;
-  font-size: var(--font-XL);
+  font-size: var(--font-XXL);
+  max-width: 100%;
 }
 
 /* desktop */
@@ -35,16 +39,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-}
-
-.desktop-nav .logo-img {
-  width: 40px;
-  height: auto;
-  background: none;
-}
-
-.desktop-nav .logo-link {
-  max-width: 100%;
 }
 
 .subsite-links {

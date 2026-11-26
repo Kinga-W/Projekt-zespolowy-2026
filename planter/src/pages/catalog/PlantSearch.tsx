@@ -11,14 +11,12 @@ export default function PlantSearch({
 }: PlantSearchProps) {
 
   return (
-    <div className="searchbar">
-      <input
-        type="text"
-        className="search"
-        value={keyword}
-        onChange={(e) => setKeyword(e.target.value)}
-        placeholder={placeholder}
-      />
-    </div>
+    <input
+      type="text"
+      className="search"
+      value={keyword}
+      onChange={(e) => setKeyword(e.target.value)}
+      placeholder={placeholder}
+    />
   );
 }
